@@ -1,0 +1,8 @@
+<ul class="text-center">
+<% @tasks.each do |task| %>
+  <p><%= link_to task.title, task_path(task) %> <%= link_to "Delete", task_path(task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></p>
+<%end %>
+  <p class="text-center"><%= link_to "add new task", new_path(@task) %></p>
+</ul>
